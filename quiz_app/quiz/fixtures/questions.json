@@ -1,0 +1,62 @@
+[
+    {
+        "model": "quiz.question",
+        "pk": 1,
+        "fields": {
+            "text": "What is the capital of Japan?",
+            "option_a": "Seoul",
+            "option_b": "Beijing",
+            "option_c": "Tokyo",
+            "option_d": "Bangkok",
+            "correct_option": "C"
+        }
+    },
+    {
+        "model": "quiz.question",
+        "pk": 2,
+        "fields": {
+            "text": "Which element has the chemical symbol 'O'?",
+            "option_a": "Oxygen",
+            "option_b": "Osmium",
+            "option_c": "Ozone",
+            "option_d": "Opium",
+            "correct_option": "A"
+        }
+    },
+    {
+        "model": "quiz.question",
+        "pk": 3,
+        "fields": {
+            "text": "Who painted the Mona Lisa?",
+            "option_a": "Vincent van Gogh",
+            "option_b": "Pablo Picasso",
+            "option_c": "Leonardo da Vinci",
+            "option_d": "Claude Monet",
+            "correct_option": "C"
+        }
+    },
+    {
+        "model": "quiz.question",
+        "pk": 4,
+        "fields": {
+            "text": "What is the largest ocean on Earth?",
+            "option_a": "Atlantic Ocean",
+            "option_b": "Indian Ocean",
+            "option_c": "Arctic Ocean",
+            "option_d": "Pacific Ocean",
+            "correct_option": "D"
+        }
+    },
+    {
+        "model": "quiz.question",
+        "pk": 5,
+        "fields": {
+            "text": "What is the square root of 144?",
+            "option_a": "10",
+            "option_b": "11",
+            "option_c": "12",
+            "option_d": "13",
+            "correct_option": "C"
+        }
+    }
+]

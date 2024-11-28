@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Feedback Container */
+        .feedback-container {
+            position: relative;
+            background: linear-gradient(145deg, #2d3e50, #1c2a3e);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6), -10px -10px 20px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Glowing Background Effect */
+        .feedback-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+            z-index: -1;
+            animation: rotateGlow 10s linear infinite;
+        }
+
+        @keyframes rotateGlow {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .feedback-container h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .feedback-container p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            background: linear-gradient(145deg, #4facfe, #00f2fe);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 -10px 20px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(145deg, #00f2fe, #4facfe);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 -10px 25px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-container">
+        <h1>{{ feedback }}</h1>
+        <p>Thank you for participating in the quiz! Your feedback matters to us.</p>
+        <div class="button-group">
+            <a href="/quiz/" class="btn">Answer More</a>
+            <a href="/" class="btn">End Quiz</a>
+        </div>
+    </div>
+</body>
+</html>
